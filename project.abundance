@@ -1,13 +1,267 @@
 {
-    "atomType": "Molecule",
-    "x": 0,
-    "y": 0,
-    "uniqueID": "id-1",
-    "name": "tutorial-default",
-    "topLevel": true,
-    "allAtoms": [],
-    "allConnectors": [],
-    "unitsKey": "MM",
-    "fileTypeVersion": 1,
-    "filetypeVersion": 1
+  "atomType": "Molecule",
+  "x": 0,
+  "y": 0,
+  "uniqueID": "id-1",
+  "name": "tutorial-default",
+  "ioValues": [
+    {
+      "name": "MyInput",
+      "ioValue": 19
+    }
+  ],
+  "topLevel": true,
+  "allAtoms": [
+    {
+      "atomType": "Output",
+      "x": 0.98,
+      "y": 0.5,
+      "uniqueID": "id-2"
+    },
+    {
+      "atomType": "Circle",
+      "x": 0.359375,
+      "y": 0.47619047619047616,
+      "uniqueID": "id-4",
+      "ioValues": [
+        {
+          "name": "diameter",
+          "ioValue": 18,
+          "currentEquation": "18"
+        }
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.5067708333333333,
+      "y": 0.41904761904761906,
+      "uniqueID": "id-7",
+      "ioValues": [
+        {
+          "name": "height",
+          "ioValue": 10
+        }
+      ]
+    },
+    {
+      "atomType": "Text",
+      "x": 0.37447916666666664,
+      "y": 0.7857142857142857,
+      "uniqueID": "id-11",
+      "ioValues": [
+        {
+          "name": "Font Size",
+          "ioValue": 15
+        },
+        {
+          "name": "Text",
+          "ioValue": "Lorem Ipsum",
+          "currentEquation": "Lorem Ipsum"
+        }
+      ],
+      "fontFamily": "MONSERRAT",
+      "selectedFontIndex": 4
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.4682291666666667,
+      "y": 0.7571428571428572,
+      "uniqueID": "id-15",
+      "ioValues": [
+        {
+          "name": "height",
+          "ioValue": 10
+        }
+      ]
+    },
+    {
+      "atomType": "Move",
+      "x": 0.6651041666666666,
+      "y": 0.8452380952380952,
+      "uniqueID": "id-22",
+      "ioValues": [
+        {
+          "name": "xDist",
+          "ioValue": 19
+        },
+        {
+          "name": "yDist",
+          "ioValue": 10
+        },
+        {
+          "name": "zDist",
+          "ioValue": 0
+        }
+      ]
+    },
+    {
+      "atomType": "Input",
+      "x": 0.025384615384615384,
+      "y": 0.15384615384615385,
+      "uniqueID": "id-35",
+      "name": "MyInput"
+    },
+    {
+      "atomType": "GitHubMolecule",
+      "x": 0.20677083333333332,
+      "y": 0.6761904761904762,
+      "uniqueID": "id-47",
+      "name": "Sphere",
+      "ioValues": [
+        {
+          "name": "Radius",
+          "ioValue": 10
+        }
+      ],
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "id-43"
+        },
+        {
+          "atomType": "Code",
+          "x": 0.4642857142857143,
+          "y": 0.41225626740947074,
+          "uniqueID": "id-44",
+          "ioValues": [
+            {
+              "name": "radius",
+              "ioValue": 10
+            }
+          ],
+          "codeVersion": 1,
+          "code": "//Inputs:[radius];\n\n//let shape = replicad.makeSphere(radius)\n\nconst newPlane = new replicad.Plane().pivot(0, 'Y');\n\n return { geometry: [replicad.makeSphere(radius)], tags: [],\n      color: '#A3CE5B',\n      bom:[],\n      plane: newPlane}\n\n\n    /**\n    To Use the Code Atom, enter your inputs to the input list a.e Inputs:[shape, height]\n    If your input is connected to another atom with a replicad geometry you can access its geometry by looking up its ID in your library. a.e library[Input1].geometry[0] \n    Use any replicad available methods to modify your geometry. Learn more about all of the available methods at \n    https://replicad.xyz/docs/introapp/UserGuide.html \n    Return a replicad object that includes geometry, color, tags and plane. \n\n\n    Example Code Atom:\n\n      Inputs:[shape, x];\n\n      let finalShape = library[shape].geometry[0].clone.translate[x,0,0]\n\n      return {geometry: finalShape, color: library[shape].color, plane: library[shape].plane, tags: library[shape].tags }\n\n      - See more examples at _______ \n\n\n    */\n"
+        },
+        {
+          "atomType": "Input",
+          "x": 0.025384615384615384,
+          "y": 0.15384615384615385,
+          "uniqueID": "id-45",
+          "name": "Radius",
+          "type": "number"
+        },
+        {
+          "atomType": "Constant",
+          "x": 0.24709302325581398,
+          "y": 0.8575851393188855,
+          "uniqueID": "id-46",
+          "value": 10
+        }
+      ],
+      "allConnectors": [
+        {
+          "ap2Name": "number or geometry",
+          "ap1ID": "id-44",
+          "ap2ID": "id-43"
+        },
+        {
+          "ap2Name": "radius",
+          "ap1ID": "id-45",
+          "ap2ID": "id-44"
+        }
+      ],
+      "parentRepo": {
+        "lastFoundGit": "2026-01-01T18:23:39.151Z",
+        "privateRepo": false,
+        "repoName": "Sphere",
+        "dateCreated": "2024-12-16T03:57:03Z",
+        "likes": 0,
+        "readMe": "https://raw.githubusercontent.com/BarbourSmith/Sphere/master/README.md?sanitize=true",
+        "yyyy": 2025,
+        "topMoleculeID": 1734321423025,
+        "githubMoleculesUsed": [],
+        "html_url": "https://github.com/BarbourSmith/Sphere",
+        "topics": [],
+        "parentRepo": "alzatin/Sphere",
+        "forks": 0,
+        "dateModified": "739548",
+        "ranking": 0.6,
+        "searchField": "sphere barboursmith creates a sphere ",
+        "owner": "BarbourSmith",
+        "description": "Creates a sphere",
+        "contentURL": "https://raw.githubusercontent.com/BarbourSmith/Sphere/master/project.abundance?sanitize=true",
+        "svgURL": "https://raw.githubusercontent.com/BarbourSmith/Sphere/master/project.svg?sanitize=true",
+        "isLocal": false
+      },
+      "unitsKey": "Inches",
+      "fileTypeVersion": 1
+    },
+    {
+      "atomType": "Molecule",
+      "x": 0.6255208333333334,
+      "y": 0.3785714285714286,
+      "uniqueID": "id-57",
+      "name": "mmmMolecule",
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "id-59"
+        }
+      ],
+      "allConnectors": [],
+      "fileTypeVersion": 1
+    },
+    {
+      "atomType": "Assembly",
+      "x": 0.7411458333333333,
+      "y": 0.4976190476190477,
+      "uniqueID": "id-61",
+      "ioValues": [
+        {
+          "name": "Shape 1",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 2",
+          "ioValue": null
+        }
+      ]
+    }
+  ],
+  "allConnectors": [
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-4",
+      "ap2ID": "id-7"
+    },
+    {
+      "ap2Name": "Shape 1",
+      "ap1ID": "id-7",
+      "ap2ID": "id-61"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-11",
+      "ap2ID": "id-15"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-15",
+      "ap2ID": "id-22"
+    },
+    {
+      "ap2Name": "Shape 2",
+      "ap1ID": "id-22",
+      "ap2ID": "id-61"
+    },
+    {
+      "ap2Name": "xDist",
+      "ap1ID": "id-35",
+      "ap2ID": "id-22"
+    },
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-61",
+      "ap2ID": "id-2"
+    }
+  ],
+  "unitsKey": "MM",
+  "fileTypeVersion": 1,
+  "filetypeVersion": 1
 }
