@@ -7,8 +7,7 @@
   "ioValues": [
     {
       "name": "MyInput",
-      "ioValue": 19,
-      "currentEquation": "19"
+      "ioValue": 19
     }
   ],
   "topLevel": true,
@@ -17,7 +16,13 @@
       "atomType": "Output",
       "x": 0.98,
       "y": 0.5,
-      "uniqueID": "id-2"
+      "uniqueID": "id-2",
+      "ioValues": [
+        {
+          "name": "number or geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
     },
     {
       "atomType": "Text",
@@ -45,6 +50,10 @@
       "uniqueID": "id-15",
       "ioValues": [
         {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
           "name": "height",
           "ioValue": 10
         }
@@ -56,6 +65,10 @@
       "y": 0.8452380952380952,
       "uniqueID": "id-22",
       "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
         {
           "name": "xDist",
           "ioValue": 19
@@ -78,24 +91,6 @@
       "name": "MyInput"
     },
     {
-      "atomType": "Molecule",
-      "x": 0.6255208333333334,
-      "y": 0.3785714285714286,
-      "uniqueID": "id-57",
-      "name": "mmmmMolecule",
-      "topLevel": false,
-      "allAtoms": [
-        {
-          "atomType": "Output",
-          "x": 0.98,
-          "y": 0.5,
-          "uniqueID": "id-59"
-        }
-      ],
-      "allConnectors": [],
-      "fileTypeVersion": 1
-    },
-    {
       "atomType": "Assembly",
       "x": 0.7411458333333333,
       "y": 0.4976190476190477,
@@ -110,6 +105,37 @@
           "ioValue": null
         }
       ]
+    },
+    {
+      "atomType": "Constant",
+      "x": 0.5032154340836013,
+      "y": 0.5952380952380952,
+      "uniqueID": "id-90",
+      "value": 10
+    },
+    {
+      "atomType": "Molecule",
+      "x": 0.6255208333333334,
+      "y": 0.3785714285714286,
+      "uniqueID": "id-57",
+      "name": "mmmmMolecule",
+      "topLevel": false,
+      "allAtoms": [
+        {
+          "atomType": "Output",
+          "x": 0.98,
+          "y": 0.5,
+          "uniqueID": "id-59",
+          "ioValues": [
+            {
+              "name": "number or geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
+        }
+      ],
+      "allConnectors": [],
+      "fileTypeVersion": 1
     },
     {
       "atomType": "GitHubMolecule",
@@ -129,7 +155,13 @@
           "atomType": "Output",
           "x": 0.98,
           "y": 0.5,
-          "uniqueID": "id-75"
+          "uniqueID": "id-75",
+          "ioValues": [
+            {
+              "name": "number or geometry",
+              "ioValue": "__GEOMETRY_INPUT__"
+            }
+          ]
         },
         {
           "atomType": "Code",
@@ -198,13 +230,6 @@
       },
       "unitsKey": "Inches",
       "fileTypeVersion": 1
-    },
-    {
-      "atomType": "Constant",
-      "x": 0.5032154340836013,
-      "y": 0.5952380952380952,
-      "uniqueID": "id-90",
-      "value": 10
     }
   ],
   "allConnectors": [
@@ -234,14 +259,14 @@
       "ap2ID": "id-2"
     },
     {
-      "ap2Name": "Shape 3",
-      "ap1ID": "id-79",
-      "ap2ID": "id-61"
-    },
-    {
       "ap2Name": "Radius",
       "ap1ID": "id-90",
       "ap2ID": "id-79"
+    },
+    {
+      "ap2Name": "Shape 3",
+      "ap1ID": "id-79",
+      "ap2ID": "id-61"
     }
   ],
   "unitsKey": "MM",
